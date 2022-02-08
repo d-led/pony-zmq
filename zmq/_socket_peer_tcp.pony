@@ -49,7 +49,7 @@ actor _SocketPeerTCP is (_SocketTCPNotifiable & zmtp.SessionNotify)
   fun _reconnect_interval_ns(): U64 =>
     (ReconnectInterval.find_in(_socket_opts) * 1e9).u64()
   
-  be _reconnect_timer_fire() =>
+  be reconnect_timer_fire() =>
     if not _active and not _disposed then
       _inner = TCPConnection(
         _endpoint._get_auth(),

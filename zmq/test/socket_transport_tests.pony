@@ -73,11 +73,11 @@ class SocketTransportTest is UnitTest
   
   fun name(): String => "zmq.Socket (transport: " + _desc + ")"
   
-  fun apply(h: TestHelper)? =>
+  fun apply(h: TestHelper) =>
     let ra = _SocketReactor; let a = zmq.Socket(zmq.PAIR, ra.notify())
     let rb = _SocketReactor; let b = zmq.Socket(zmq.PAIR, rb.notify())
     
-    let net_auth = NetAuth(h.env.root as AmbientAuth)
+    let net_auth = NetAuth(h.env.root)
     let ctx = zmq.Context
     
     match _setup
