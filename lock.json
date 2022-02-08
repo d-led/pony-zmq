@@ -1,0 +1,12 @@
+{
+  "locks": [
+    {
+      "locator": "github.com/d-led/pony-sodium.git",
+      "revision": "master"
+    },
+    {
+      "locator": "github.com/jemc/pony-inspect.git",
+      "revision": "master"
+    }
+  ]
+}

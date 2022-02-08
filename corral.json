@@ -1,0 +1,20 @@
+{
+    "packages": [],
+    "deps": [{
+            "locator": "github.com/d-led/pony-sodium.git",
+            "version": "master"
+        },
+        {
+            "locator": "github.com/jemc/pony-inspect.git",
+            "version": "master"
+        }
+    ],
+    "info": {
+        "description": "",
+        "homepage": "",
+        "license": "",
+        "documentation_url": "",
+        "version": "",
+        "name": ""
+    }
+}

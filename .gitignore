@@ -1,2 +1,4 @@
 bin
 .deps
+_corral/
+test
