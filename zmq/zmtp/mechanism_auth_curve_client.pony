@@ -72,7 +72,7 @@ class MechanismAuthCurveClient is Mechanism
                     "\x00\x00\x00\x00\x00\x00\x00\x00"
     command.ct_pk         = _ct_pk
     command.short_nonce   = short_nonce
-    command.signature_box = try CryptoBox(signature, nonce, _ct_sk, _s_pk)? else
+    command.signature_box = try CryptoBox(consume signature, nonce, _ct_sk, _s_pk)? else
                               _session.notify.protocol_error("couldn't encode HELLO box")
                               error
                             end
